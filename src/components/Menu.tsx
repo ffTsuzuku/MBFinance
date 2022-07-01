@@ -12,19 +12,20 @@ export default function Menu() {
             shadow={'dark-lg'}
             justifyContent={'center'}
             gridTemplateRows={'repeat(2, 50px)'}
-            gridRowGap={5}>
+            gridRowGap={5}
+        >
             <Icon
                 as={CgProfile}
-                w={10}
-                h={10}
+                w={8}
+                h={8}
                 cursor={'pointer'}
                 color={'green.600'}
                 _hover={{ color: 'green.300' }}
             />
             <Icon
                 as={AiFillHome}
-                w={10}
-                h={10}
+                w={8}
+                h={8}
                 cursor={'pointer'}
                 color={'green.600'}
                 _hover={{ color: 'green.300' }}

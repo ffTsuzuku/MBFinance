@@ -1,17 +1,21 @@
-import { Grid, Text } from '@chakra-ui/react'
+import { Grid, Text, useColorModeValue } from '@chakra-ui/react'
 
-export default function AccountCard() {
+interface AccountCardProps {
+    width?: string | number
+    height?: string | number
+}
+export default function AccountCard({ height, width }: AccountCardProps) {
+    const shadow = useColorModeValue('lg', 'dark-lg')
     return (
         <Grid
-            marginLeft={3}
-            marginRight={3}
             p={3}
-            shadow='2xl'
+            shadow={shadow}
             borderWidth={0.3}
-            w={'300px'}
-            h={'100%'}
+            w={width ?? '100%'}
+            h={height ?? '100%'}
             borderRadius={5}
-            gridTemplateRows={'1fr 1fr 1fr'}>
+            gridTemplateRows={'1fr 1fr 1fr'}
+        >
             <Text>Visa</Text>
             <Text>08330</Text>
             <Text>$130.00</Text>
