@@ -33,7 +33,7 @@ export default function RecentTransactions() {
     return (
         <Grid
             gridTemplateRows={'1fr 6fr .5fr'}
-            h={'650px'}
+            h={'860px'}
             overflowY={'hidden'}
             p={'50px'}
         >
@@ -47,8 +47,8 @@ export default function RecentTransactions() {
                         variant='outline'
                     />
                     <MenuList>
-                        <MenuItem command='⌘T'>New Tab</MenuItem>
-                        <MenuItem command='⌘N'>New Window</MenuItem>
+                        <MenuItem command='⌘T'>See All</MenuItem>
+                        <MenuItem command='⌘N'>Export</MenuItem>
                         <MenuItem command='⌘⇧N'>Open Closed Tab</MenuItem>
                         <MenuItem command='⌘O'>Open File...</MenuItem>
                     </MenuList>

@@ -14,6 +14,8 @@ import {
     StatArrow
 } from '@chakra-ui/react'
 
+import { Doughnut } from 'react-chartjs-2'
+
 import { IoIosArrowDown } from 'react-icons/io'
 import AccountCard from './AccountCard'
 // Import Swiper React components
@@ -22,6 +24,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 // Import Swiper styles
 import 'swiper/css'
 import RecentTransactions from './RecentTransactions'
+import { Mousewheel, Scrollbar } from 'swiper'
+import FinanceChart from './FinanceChart'
 
 export default function Dashboard() {
     const AccountJSX = []
@@ -39,7 +43,7 @@ export default function Dashboard() {
                     w={'100%'}
                     h={'100%'}
                     p={'50px'}
-                    gridTemplateRows='1fr 1fr 1fr 5fr'
+                    gridTemplateRows='.5fr .5fr .5fr 5fr'
                 >
                     <Heading w={'100%'} color={'green.400'}>
                         Hello Deep!
@@ -74,7 +78,9 @@ export default function Dashboard() {
                             </StatLabel>
                         </Stat>
                     </Grid>
-                    <Flex p={3} shadow='dark-lg' borderRadius={7}></Flex>
+                    <Flex p={3} shadow='dark-lg' borderRadius={7}>
+                        <FinanceChart />
+                    </Flex>
                 </Grid>
                 <RecentTransactions />
             </Grid>
@@ -82,12 +88,23 @@ export default function Dashboard() {
                 maxW={'100%'}
                 overflowX={'hidden'}
                 p={'0px 0px 10px 40px'}
+                mb={10}
                 flexWrap='wrap'
             >
                 <Text w={'100%'} m={0} p={0} fontSize={'2xl'} h={'20px'}>
                     Account
                 </Text>
-                <Swiper slidesPerView={5} spaceBetween={30} loop={false}>
+                <Swiper
+                    className='mySwiper'
+                    slidesPerView={6}
+                    spaceBetween={300}
+                    loop={false}
+                    mousewheel={true}
+                    scrollbar={{
+                        hide: false
+                    }}
+                    modules={[Mousewheel, Scrollbar]}
+                >
                     {AccountJSX}
                 </Swiper>
             </Flex>
