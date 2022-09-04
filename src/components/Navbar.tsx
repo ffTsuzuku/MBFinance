@@ -20,6 +20,7 @@ export default function Navbar() {
     const fontColor = useColorModeValue(colors.gray100, colors.purple100)
     const menuFontColor = useColorModeValue(colors.blue, colors.purple100)
     const menuBgColor = useColorModeValue(colors.white, colors.black500)
+    const menuIconColor = useColorModeValue(colors.black500, colors.white)
     return (
         <Flex justifyContent={'space-between'} alignItems={'center'} p={5}>
             <Text fontWeight={'extrabold'} color={fontColor}>
@@ -27,7 +28,7 @@ export default function Navbar() {
             </Text>
             <HiOutlineMenu
                 onClick={() => setIsOpen(true)}
-                color={fontColor}
+                color={menuIconColor}
                 fontSize={'25px'}
                 cursor={'pointer'}
             />
