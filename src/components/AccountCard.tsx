@@ -2,12 +2,13 @@ import { Grid, Flex, Text, useColorModeValue } from '@chakra-ui/react'
 
 import { FaCcVisa } from 'react-icons/fa'
 
-import { colors } from '../theme'
+import { colors, shadows } from '../theme'
 export default function AccountCard() {
-    const bgColor = useColorModeValue(colors.blue, colors.black100)
+    const bgColor = useColorModeValue(colors.green500, colors.black100)
     //const accountIconColor = useColorModeValue(colors.white, colors.black100)
     return (
         <Grid
+            shadow={shadows.base}
             gridRowGap={20}
             alignContent={'space-between'}
             backgroundColor={bgColor}

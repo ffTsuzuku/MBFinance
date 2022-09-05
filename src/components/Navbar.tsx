@@ -18,7 +18,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
 
     const fontColor = useColorModeValue(colors.gray100, colors.purple100)
-    const menuFontColor = useColorModeValue(colors.blue, colors.purple100)
+    const menuFontColor = useColorModeValue(colors.green500, colors.purple100)
     const menuBgColor = useColorModeValue(colors.white, colors.black500)
     const menuIconColor = useColorModeValue(colors.black500, colors.white)
     return (

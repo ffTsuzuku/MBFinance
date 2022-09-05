@@ -26,7 +26,8 @@ const colors = {
     blue: '#0AA7FF',
     purple100: '#E2E2FF',
     black100: '#636366',
-    black500: '#383839'
+    black500: '#383839',
+    green500: '#54989C'
 }
 
 const shadows = {

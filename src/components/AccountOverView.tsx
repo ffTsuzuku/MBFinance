@@ -4,7 +4,7 @@ import { TiArrowSortedUp } from 'react-icons/ti'
 
 import { colors, shadows } from '../theme'
 export default function AccountOverView() {
-    const containerColor = useColorModeValue(colors.blue, colors.black100)
+    const containerColor = useColorModeValue(colors.green500, colors.black100)
     const containerTextColor = useColorModeValue(colors.white, colors.purple100)
     return (
         <Grid gridRowGap={3}>
