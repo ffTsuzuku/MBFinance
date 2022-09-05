@@ -7,7 +7,6 @@ import Navbar from './components/Navbar'
 function App() {
     return (
         <Grid>
-            <Navbar />
             <Grid p={5} gridRowGap={10}>
                 <AccountOverView />
                 <AccountList />

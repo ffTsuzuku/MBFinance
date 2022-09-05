@@ -1,21 +1,12 @@
 // theme.ts
 import { mode } from '@chakra-ui/theme-tools'
 // 1. import `extendTheme` function
-import { extendTheme, type ThemeConfig } from '@chakra-ui/react'
+import { color, extendTheme, type ThemeConfig } from '@chakra-ui/react'
 
 // 2. Add your color mode config
 const config: ThemeConfig = {
     initialColorMode: 'light',
     useSystemColorMode: false
-}
-
-const styles = {
-    global: (props) => ({
-        body: {
-            color: mode('gray.800', 'whiteAlpha.900')(props),
-            bg: mode('gray.100', '#383839')(props)
-        }
-    })
 }
 
 const colors = {
@@ -28,6 +19,18 @@ const colors = {
     black100: '#636366',
     black500: '#383839',
     green500: '#54989C'
+}
+
+const styles = {
+    global: (props) => ({
+        body: {
+            color: mode('gray.800', 'whiteAlpha.900')(props),
+            bg: mode('gray.100', '#383839')(props)
+        },
+        p: {
+            color: mode(colors.gray100, colors.purple100)(props)
+        }
+    })
 }
 
 const shadows = {
